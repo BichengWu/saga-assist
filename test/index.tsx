@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import "./normalize.css";
 
-import {add} from "@lib";
+import {add} from "@src";
 
 ReactDOM.render(
 	<div style={{ padding: 20 }}>

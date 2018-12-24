@@ -7,9 +7,9 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 const config: webpack.Configuration & WebpackDevServer.Configuration = {
 	mode: "development",
 	devtool: "inline-source-map",
-	entry: path.resolve(__dirname, "test/index.tsx"),
+	entry: path.resolve(__dirname, "../test/index.tsx"),
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "../dist"),
         chunkFilename: 'js/[name].[hash:5].js',
         filename: "js/[name].[hash:5].js"
     },

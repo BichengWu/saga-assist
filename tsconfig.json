@@ -1,28 +1,18 @@
 {
+  "extends": "./config/tsconfig.base",
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
     "lib": ["esnext", "dom"],
     "jsx": "react",
-    "sourceMap": true,
-    "allowJs": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "rootDirs": ["lib", "test"],
+    "rootDirs": ["src", "test"],
     "baseUrl": ".",
     "paths": {
-      "@lib": ["lib"]
+      "@src": ["src"]
     }
   },
+  "include": ["src", "test"],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "config"
   ]
 }

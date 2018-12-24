@@ -4,8 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --config webpack.config.prod.ts",
-    "start": "webpack-dev-server --config webpack.config.dev.ts"
+    "start": "webpack-dev-server --config config/webpack.config.dev.ts",
+    "build": "rm -rf lib && tsc -p config/tsconfig.build.json -d" 
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
     "@types/webpack": "^4.4.7",
     "@types/webpack-dev-server": "^3.1.1",
     "autoprefixer": "^9.0.1",
+    "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.0.2",
     "cssnano": "^4.0.4",
