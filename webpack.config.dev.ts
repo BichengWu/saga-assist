@@ -8,6 +8,7 @@ const config: webpack.Configuration & WebpackDevServer.Configuration = merge(com
 	devtool: "inline-source-map",
 	devServer: {
 		open: true,
+		disableHostCheck: true,
 	},
 	module: {
 		rules: [
