@@ -13,7 +13,12 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "rootDirs": ["src", "test"],
+    "baseUrl": "./",
+    "paths": {
+      "@lib": ["lib"]
+    },
   },
   "exclude": [
     "node_modules",

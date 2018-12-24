@@ -3,14 +3,14 @@ import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: webpack.Configuration = {
-    entry: path.resolve(__dirname, "src/index.tsx"),
+    entry: path.resolve(__dirname, "test/index.tsx"),
     output: {
         path: path.resolve(__dirname, "dist"),
         chunkFilename: 'js/[name].[hash:5].js',
         filename: "js/[name].[hash:5].js"
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", "jsx"]
+        extensions: [".ts", ".tsx"]
     },
     module: {
         rules: [
