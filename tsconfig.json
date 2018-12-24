@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
+    "lib": ["esnext", "dom"],
     "jsx": "react",
     "sourceMap": true,
     "allowJs": true,
@@ -14,11 +15,11 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "rootDirs": ["src", "test"],
-    "baseUrl": "./",
+    "rootDirs": ["lib", "test"],
+    "baseUrl": ".",
     "paths": {
       "@lib": ["lib"]
-    },
+    }
   },
   "exclude": [
     "node_modules",

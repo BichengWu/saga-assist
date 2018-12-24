@@ -1,6 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import {TsConfigPathsPlugin} from "awesome-typescript-loader";
 
 const config: webpack.Configuration = {
     entry: path.resolve(__dirname, "test/index.tsx"),
@@ -10,11 +11,14 @@ const config: webpack.Configuration = {
         filename: "js/[name].[hash:5].js"
     },
     resolve: {
-        extensions: [".ts", ".tsx"]
+        extensions: [".ts", ".tsx", ".js", ".jsx", "json"],
+        plugins: [
+            new TsConfigPathsPlugin(/* { configFileName, compiler } */)
+        ]
     },
     module: {
         rules: [
-            { test: /\.tsx?$/, loader: "ts-loader" },
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             {
 				test: /\.(png|jpg|jpeg|gif|svg)$/,
 				use: [

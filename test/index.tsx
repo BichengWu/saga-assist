@@ -1,10 +1,12 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import "./normalize.css"
+import "./normalize.css";
+
+import {add} from "@lib";
 
 ReactDOM.render(
 	<div style={{ padding: 20 }}>
-		sdasd
+		welcome to Web! {add()}
 	</div>,
 	document.getElementById('root')
 )
