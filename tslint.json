@@ -13,6 +13,7 @@
 		"object-literal-sort-keys":false,
 		"radix":false,
 		"jsx-boolean-value": false,
-		"jsx-self-close": false
+		"jsx-self-close": false,
+		"interface-name": [true, "never-prefix"]
 	}
 }
