@@ -7,12 +7,18 @@ const initialState: State = {
 };
 
 class TextMain extends Module<State> {
-    *add(num: number) {
+    *add() {
+        const {num} = this.state;
         yield* this.setState({num: num + 1});
     }
 
-    *minus(num: number) {
+    *minus() {
+        const {num} = this.state;
         yield* yield* this.setState({num: num - 1});
+    }
+
+    *reset(){
+        yield* this.resetState();
     }
 }
 
