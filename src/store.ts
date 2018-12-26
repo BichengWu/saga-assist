@@ -2,13 +2,11 @@ import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { Action } from "./action";
 
-// reducer
-export const totalState = {};
+export const rootState = {};
 
-function reducer(state = totalState, action: Action) {
+function reducer(state = rootState, action: Action) {
     switch (action.type) {
         case "UPDATE_STATE":
-        console.info("action", action);
             return { ...state, ...action.payload };
         case "UPDATE_LOADING":
             return state;

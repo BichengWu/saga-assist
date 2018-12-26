@@ -1,4 +1,4 @@
-import { Text } from "./component";
+import { Test } from "./component";
 import { register, Module } from "@src";
 import { State } from "./type";
 
@@ -6,7 +6,7 @@ const initialState: State = {
     num: 0
 };
 
-class TextMain extends Module<State> {
+class TestMain extends Module<State> {
     *add() {
         const {num} = this.state;
         yield* this.setState({num: num + 1});
@@ -14,7 +14,7 @@ class TextMain extends Module<State> {
 
     *minus() {
         const {num} = this.state;
-        yield* yield* this.setState({num: num - 1});
+        yield* this.setState({num: num + 1});
     }
 
     *reset(){
@@ -22,6 +22,6 @@ class TextMain extends Module<State> {
     }
 }
 
-const actions = register(new TextMain("TextMain", initialState));
+const actions = register(new TestMain("TestMain", initialState));
 
-export { actions, Text };
+export { actions, Test };

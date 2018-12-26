@@ -1,5 +1,5 @@
 import "./normalize.css";
 import {render} from "@src";
-import {Text} from "./component/Test";
+import {Test} from "./component/Test";
 
-render(Text);
+render(Test);

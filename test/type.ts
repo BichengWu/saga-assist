@@ -1,5 +1,5 @@
-import {State as TextMainState} from "./component/Test/type";
+import {State as TestMainState} from "./component/Test/type";
 
 export interface RootState {
-    TextMain: TextMainState
+    TestMain: TestMainState
 }

@@ -6,7 +6,6 @@ export class Module<S> {
     constructor(private readonly moduleName: string, protected initialState: S) {
         this.moduleName = moduleName;
         this.initialState = initialState;
-
         // register initial state
         runSaga(this.setState.bind(this), initialState);
     }
