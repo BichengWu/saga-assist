@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { store, runSaga } from "./store";
 import { register } from "./register";
+import {Module} from "./module";
 
 function render(App: React.ComponentType) {
     ReactDOM.render(
@@ -13,4 +14,4 @@ function render(App: React.ComponentType) {
     );
 }
 
-export { render, runSaga, register };
+export { render, runSaga, register, Module };

@@ -1,8 +1,8 @@
 import * as React from "react";
 import {connect} from "react-redux";
-import {State} from "../type";
+import {} from "../type";
 import {actions} from "../index";
-// import {runSaga} from "@src";
+import {RootState} from "test/type"
 
 class TextBase extends React.PureComponent<{ num: number }> {
     render() {
@@ -16,9 +16,9 @@ class TextBase extends React.PureComponent<{ num: number }> {
     }
 }
 
-const mapStateToProps = (state: State) => {
+const mapStateToProps = (state: RootState) => {
     return {
-        num: state.Text.num
+        num: state.TextMain.num
     };
 };
 

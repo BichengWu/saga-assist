@@ -1,5 +1,3 @@
 export interface State {
-    Text: {
-        num: number
-    }
+    num: number
 }
