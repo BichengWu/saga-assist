@@ -9,7 +9,7 @@ export function register<T extends object>(actions: T) {
                     if (arguments.length > 6) {
                         throw new Error(`function ${key as string} should be less than six parameters`)
                     }
-                    runSaga(target[key].bind(target), p1, p2, p3, p4, p5, p6);
+                    runSaga(target[key].bind(actions), p1, p2, p3, p4, p5, p6);
                 };
             } else {
                 return Reflect.get(target, key);

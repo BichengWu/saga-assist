@@ -14,7 +14,7 @@ class TestMain extends Module<State> {
 
     *minus() {
         const {num} = this.state;
-        yield* this.setState({num: num + 1});
+        yield* this.setState({num: num - 1});
     }
 
     *reset(){

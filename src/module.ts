@@ -1,21 +1,18 @@
 import { put } from "redux-saga/effects";
 import { runSaga, store } from "./store";
-import { Action } from "./action";
+import { Action, setStateAction } from "./action";
 
-export class Module<S> {
+export class Module<S extends object> {
     constructor(private readonly moduleName: string, private initialState: S) {
-        this.moduleName = moduleName;
-        this.initialState = initialState;
-        // cache initial state
         runSaga(this.setState.bind(this), initialState);
     }
 
     protected *setState(state: Partial<S>) {
-        yield put<Action>({ type: "UPDATE_STATE", payload: { [this.moduleName]: state } });
+        yield put<Action>(setStateAction(this.moduleName, state));
     }
 
     protected *resetState(){
-        yield put<Action>({type: "UPDATE_STATE", payload: {[this.moduleName]: this.initialState}});
+        yield put<Action>(setStateAction(this.moduleName, this.initialState));
     }
 
     protected get state() {

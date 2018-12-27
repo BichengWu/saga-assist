@@ -1,7 +1,14 @@
-import {Action as ReduxAction} from "redux";
+import { Action as ReduxAction } from "redux";
 
-export type ActionType = "UPDATE_STATE" | "UPDATE_LOADING" | "UPDATE_ERROR";
+type ActionType = "SET_STATE" | "UPDATE_LOADING" | "UPDATE_ERROR";
 
 export interface Action extends ReduxAction<ActionType> {
-    payload: any;
+    module: string;
+    payload: object;
 }
+
+export const setStateAction = (module: string, payload: object) => ({
+    type: "SET_STATE" as ActionType,
+    module,
+    payload
+});
