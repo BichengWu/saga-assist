@@ -3,10 +3,10 @@ import { runSaga, store } from "./store";
 import { Action } from "./action";
 
 export class Module<S> {
-    constructor(private readonly moduleName: string, protected initialState: S) {
+    constructor(private readonly moduleName: string, private initialState: S) {
         this.moduleName = moduleName;
         this.initialState = initialState;
-        // register initial state
+        // cache initial state
         runSaga(this.setState.bind(this), initialState);
     }
 
