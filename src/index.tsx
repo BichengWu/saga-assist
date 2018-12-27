@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { store, runSaga } from "./store";
 import { register } from "./register";
 import {Module} from "./module";
+import {call} from "./effects";
 
 function render(App: React.ComponentType) {
     ReactDOM.render(
@@ -14,4 +15,4 @@ function render(App: React.ComponentType) {
     );
 }
 
-export { render, runSaga, register, Module };
+export { render, runSaga, register, Module, call };
