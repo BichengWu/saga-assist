@@ -21,6 +21,7 @@ class TestMain extends Module<State> {
         yield* this.resetState();
     }
 
+    // @loading("loading")
     *getList() {
         const list = yield call(getList, "1");
         console.log("list: ", list);
@@ -38,6 +39,6 @@ export { actions, Test };
 
 function getList(id: string): Promise<Array<{id: string}>> {
     return new Promise((resolve, reject) => {
-        reject([{id}])
+        resolve([{id}])
     });
 }

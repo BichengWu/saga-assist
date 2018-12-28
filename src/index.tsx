@@ -1,10 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { store } from "./store";
-import { register } from "./register";
-import { Module } from "./module";
-import { call } from "./effects";
+import { store } from "./core/store";
+
+import { register } from "./core/register";
+import { Module } from "./core/module";
+import { call } from "./core/effects";
+
+import {loading} from "./utils/decorator";
 
 function run(App: React.ComponentType) {
     ReactDOM.render(
@@ -15,4 +18,8 @@ function run(App: React.ComponentType) {
     );
 }
 
+// core
 export { run, register, Module, call };
+
+// utils
+export {loading};
