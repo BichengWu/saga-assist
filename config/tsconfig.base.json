@@ -4,6 +4,8 @@
       "module": "commonjs",
       "sourceMap": true,
       "allowJs": false,
+      "jsx": "react",
+      "lib": ["esnext", "dom"],
       "strict": true,
       "noImplicitAny": true,
       "esModuleInterop": true,
