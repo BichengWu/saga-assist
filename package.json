@@ -2,13 +2,18 @@
   "name": "saga-assist",
   "version": "0.0.1",
   "description": "Integrate redux and redux-saga to automatically manage your status",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.config.dev.ts",
-    "build": "rm -rf lib && tsc -p config/tsconfig.build.json -d" 
+    "build": "rm -rf lib && tsc -p config/tsconfig.build.json -d"
   },
-  "keywords": ["redux", "redux-saga", "redux-saga-assist", "saga"],
+  "keywords": [
+    "redux",
+    "redux-saga",
+    "redux-saga-assist",
+    "saga"
+  ],
   "author": "Alex",
   "license": "MIT",
   "sideEffects": false,
