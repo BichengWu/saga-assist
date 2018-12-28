@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { store, runSaga } from "./store";
+import { store } from "./store";
 import { register } from "./register";
-import {Module} from "./module";
-import {call} from "./effects";
+import { Module } from "./module";
+import { call } from "./effects";
 
-function render(App: React.ComponentType) {
+function run(App: React.ComponentType) {
     ReactDOM.render(
         <Provider store={store}>
             <App />
@@ -15,4 +15,4 @@ function render(App: React.ComponentType) {
     );
 }
 
-export { render, runSaga, register, Module, call };
+export { run, register, Module, call };

@@ -37,7 +37,7 @@ export { actions, Test };
 // http request
 
 function getList(id: string): Promise<Array<{id: string}>> {
-    return new Promise(resolve => {
-        resolve([{id}])
+    return new Promise((resolve, reject) => {
+        reject([{id}])
     });
 }
