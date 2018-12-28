@@ -7,7 +7,8 @@ import { register } from "./core/register";
 import { Module } from "./core/module";
 import { call } from "./core/effects";
 
-import {loading} from "./utils/decorator";
+import { loading } from "./utils/decorator";
+import { getLoading, updateLoading } from "./utils/loading";
 
 function run(App: React.ComponentType) {
     ReactDOM.render(
@@ -22,4 +23,4 @@ function run(App: React.ComponentType) {
 export { run, register, Module, call };
 
 // utils
-export {loading};
+export { loading, getLoading, updateLoading };

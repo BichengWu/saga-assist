@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import {getLoading} from "@src";
 import { actions } from "../index";
 import { RootState } from "test/type";
 
@@ -20,6 +21,8 @@ class TestBase extends React.PureComponent<Props> {
                 <div style={{marginTop: 20}}>
                     <pre>{JSON.stringify(this.props.state, null, 4)}</pre>
                 </div>
+                <span>{getLoading("loading+..")}</span>
+                <span>{getLoading("loading-..")}</span>
             </div>
         );
     }

@@ -8,4 +8,4 @@ export class ErrorMessageException<T> extends Exception<T> {}
 
 export const errorHandler = <T>(err: T) => {
     console.info("exception: \n", err);
-}
+};

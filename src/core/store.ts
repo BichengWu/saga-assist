@@ -13,7 +13,7 @@ export const rootState: RootStore = {
 function reducer(state = rootState, action: Action) {
     switch (action.type) {
         case "SET_STATE":
-            return { ...state, [action.module]: Object.assign(state[action.module] || {}, action.payload) };
+            return { ...state, [action.module!]: Object.assign(state[action.module!] || {}, action.payload) };
         case "UPDATE_LOADING":
             return { ...state, "@@loading": Object.assign(state["@@loading"], action.payload) };
         default:

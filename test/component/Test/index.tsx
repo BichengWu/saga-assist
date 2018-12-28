@@ -1,19 +1,24 @@
 import { Test } from "./component";
-import { register, Module, call } from "@src";
+import { register, Module, call, loading } from "@src";
 import { State } from "./type";
+import { delay } from "redux-saga";
 
 const initialState: State = {
     num: 0
 };
 
 class TestMain extends Module<State> {
+    @loading("loading+..")
     *add() {
         const {num} = this.state;
+        yield delay(1000);
         yield* this.setState({num: num + 1});
     }
 
+    @loading("loading-..")
     *minus() {
         const {num} = this.state;
+        yield delay(1000);
         yield* this.setState({num: num - 1});
     }
 
@@ -21,7 +26,6 @@ class TestMain extends Module<State> {
         yield* this.resetState();
     }
 
-    // @loading("loading")
     *getList() {
         const list = yield call(getList, "1");
         console.log("list: ", list);

@@ -11,7 +11,7 @@ export class Module<S extends object> {
         yield put<Action>(setStateAction(this.moduleName, state));
     }
 
-    protected *resetState(){
+    protected *resetState() {
         yield put<Action>(setStateAction(this.moduleName, this.initialState));
     }
 

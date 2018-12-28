@@ -3,7 +3,7 @@ import { Action as ReduxAction } from "redux";
 type ActionType = "SET_STATE" | "UPDATE_LOADING";
 
 export interface Action extends ReduxAction<ActionType> {
-    module: string;
+    module?: string;
     payload: object;
 }
 
