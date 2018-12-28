@@ -10,12 +10,12 @@ import { call } from "./core/effects";
 import { loading } from "./utils/decorator";
 import { getLoading, updateLoading } from "./utils/loading";
 
-function run(App: React.ComponentType) {
+function run(App: React.ComponentType, rootId: string) {
     ReactDOM.render(
         <Provider store={store}>
             <App />
         </Provider>,
-        document.getElementById("root")
+        document.getElementById(rootId)
     );
 }
 
