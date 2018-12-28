@@ -1,7 +1,8 @@
 import { Test } from "./component";
-import { register, Module, call, loading } from "@src";
+import { register, Module, loading } from "@src";
 import { State } from "./type";
 import { delay } from "redux-saga";
+import { call } from "redux-saga/effects";
 
 const initialState: State = {
     num: 0

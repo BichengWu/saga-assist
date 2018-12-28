@@ -5,7 +5,6 @@ import { store } from "./core/store";
 
 import { register } from "./core/register";
 import { Module } from "./core/module";
-import { call } from "./core/effects";
 
 import { loading } from "./utils/decorator";
 import { getLoading, updateLoading } from "./utils/loading";
@@ -20,7 +19,7 @@ function run(App: React.ComponentType, rootId: string) {
 }
 
 // core
-export { run, register, Module, call };
+export { run, register, Module };
 
 // utils
 export { loading, getLoading, updateLoading };
